@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-nodejs
+  template:
+    metadata:
+      labels:
+        app: helloworld-nodejs
+    spec:
+      containers:
+      - name: webapp
+        image: ghcr.io/ciftcicagatay/helloworld-nodejs/helloworld-nodejs:sha-1d1ab8913302a4b10350016cb624b0221de44968
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: github-registry
