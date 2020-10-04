@@ -11,11 +11,10 @@ spec:
     metadata:
       labels:
         app: helloworld-nodejs
+        istio-injection: enabled
     spec:
       containers:
       - name: webapp
         image: ghcr.io/ciftcicagatay/helloworld-nodejs/helloworld-nodejs:sha-13862379182389638b228cdf3ab4bbedfd726279
         ports:
         - containerPort: 5000
-      imagePullSecrets:
-      - name: github-registry
