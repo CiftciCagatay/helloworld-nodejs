@@ -8,7 +8,6 @@ spec:
     matchLabels:
       app: helloworld-nodejs
   template:
-    replicas: 1
     metadata:
       labels:
         app: helloworld-nodejs
@@ -21,4 +20,4 @@ spec:
         - containerPort: 11130
         env:
           - name: PORT
-            value: 11130
+            value: '11130'
