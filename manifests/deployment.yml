@@ -8,6 +8,7 @@ spec:
     matchLabels:
       app: helloworld-nodejs
   template:
+    replicas: 1
     metadata:
       labels:
         app: helloworld-nodejs
