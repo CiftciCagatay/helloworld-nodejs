@@ -2,12 +2,13 @@ apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   name: custom-metric-hpa-test
+  namespace: webapp
   annotations:
     metric-config.object.istio-requests-total.prometheus/per-replica: "true"
     metric-config.object.istio-requests-total.prometheus/query: |
       sum (rate(istio_requests_total{ app="helloworld-nodejs" }[1m]))
       /
-      count(count (container_memory_usage_bytes{namespace="default",pod=~"webapp.*"}) by (pod))
+      count(count (container_memory_usage_bytes{namespace="webapp",pod=~"webapp.*"}) by (pod))
 spec:
   maxReplicas: 10
   minReplicas: 1
