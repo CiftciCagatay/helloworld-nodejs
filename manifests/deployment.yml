@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: ghcr.io/ciftcicagatay/helloworld-nodejs/helloworld-nodejs:sha-13862379182389638b228cdf3ab4bbedfd726279
+        image: ghcr.io/ciftcicagatay/helloworld-nodejs/helloworld-nodejs:sha-8e9ffe9f49cf1640105ba15314aeae1364347d33
         ports:
         - containerPort: 11130
         env:
