@@ -24,4 +24,4 @@ spec:
           apiVersion: v1
           kind: Pod
           name: webapp
-        targetValue: 10
+        targetValue: 10m
