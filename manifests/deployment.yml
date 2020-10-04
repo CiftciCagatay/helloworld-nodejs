@@ -18,3 +18,6 @@ spec:
         image: ghcr.io/ciftcicagatay/helloworld-nodejs/helloworld-nodejs:sha-13862379182389638b228cdf3ab4bbedfd726279
         ports:
         - containerPort: 11130
+        env:
+          - name: PORT
+            value: 11130
