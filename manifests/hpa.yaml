@@ -16,7 +16,6 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: webapp
-    namespace: webapp
   metrics:
     - type: Object
       object:
