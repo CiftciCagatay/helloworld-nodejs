@@ -8,10 +8,6 @@ jobs:
   login:
     runs-on: ubuntu-20.04
     steps:
-      - id: read-docker-image-identifiers
-        name: Read Docker Image Identifiers
-        run: echo ::set-env name=IMAGE_REPOSITORY::$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')
-
       - name: Checkout
         uses: actions/checkout@v2
 
